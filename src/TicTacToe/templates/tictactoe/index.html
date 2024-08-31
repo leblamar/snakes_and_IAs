@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TicTacToe</title>
+    <script src="https://unpkg.com/htmx.org@2.0.2" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div id="welcome">
+    <h1>Welcome to TicTacToe!</h1>
+    <div>
+        <button
+            hx-get="/new_game"
+            hx-target="#welcome"
+            hx-swap="outerHTML"
+        >
+            Play a new game
+        </button>
+    </div>
+</div>
+
+</body>
+</html>
