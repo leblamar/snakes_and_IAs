@@ -1,18 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TicTacToe</title>
     <script src="https://unpkg.com/htmx.org@2.0.2" crossorigin="anonymous"></script>
+    <script src="{% static 'tictactoe/script/tailwind.js' %}" crossorigin="anonymous"></script>
+
+    <title>TicTacToe</title>
 </head>
 
 <body>
 
-<div id="welcome">
-    <h1>Welcome to TicTacToe!</h1>
-    <div>
+<div id="welcome" class="w-full h-full flex flex-col">
+    <div class="flex justify-center text-xl p-2">Welcome to TicTacToe!</div>
+    <div class="w-full h-full flex justify-center">
         <button
-            hx-get="/new_game"
+            class="m-2 p-2 border rounded-md"
+            hx-get="new_game"
             hx-target="#welcome"
             hx-swap="outerHTML"
         >

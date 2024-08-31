@@ -1,0 +1,18 @@
+<div id="game">
+
+<h1>Game number: {{ game.id }}</h1>
+<h2>Turn: Player {{ game.current_player }}</h2>
+
+<div id="board" class="border border-blue-500">
+    <table>
+        {% for row in game.board %}
+            <tr>
+            {% for box in row %}
+                <td class="border">{{ box }}</td>   
+            {% endfor %}
+            </tr>
+       {% endfor %}
+    </table>
+</div>
+
+</div>
