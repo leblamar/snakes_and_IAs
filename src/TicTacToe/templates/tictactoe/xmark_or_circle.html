@@ -1,0 +1,6 @@
+{% load static %}
+{% if game.current_player == 1 %}
+    <img width="60px" height="60px" src="{% static 'tictactoe/images/xmark-solid.svg' %}"/>
+{% else %}
+    <img width="60px" height="60px" src="{% static 'tictactoe/images/circle-solid.svg' %}"/>
+{% endif %}

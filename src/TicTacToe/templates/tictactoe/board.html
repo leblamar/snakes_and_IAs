@@ -1,0 +1,11 @@
+<table class="border border-blue-500">
+{% for row in game.board %}
+    <tr>
+    {% for box in row %}
+        <td class="m-0 p-0 w-28 h-28">
+            {% include 'tictactoe/case.html' %}
+        </td>   
+    {% endfor %}
+    </tr>
+{% endfor %}
+</table>

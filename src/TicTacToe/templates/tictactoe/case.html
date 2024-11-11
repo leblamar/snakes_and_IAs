@@ -1,0 +1,11 @@
+{% if box == 0 %}
+<button class="w-full h-full border m-0 p-0 group flex justify-center items-center">
+    <div class="hidden group-hover:block">
+        {% include 'tictactoe/xmark_or_circle.html' %}
+    </div>
+</button>
+{% else %}
+<div>
+    {% include 'tictactoe/xmark_or_circle.html' %}
+</div>
+{% endif %}

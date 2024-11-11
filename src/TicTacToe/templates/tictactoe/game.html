@@ -1,18 +1,10 @@
-<div id="game">
+<div id="game" class="w-full h-full flex flex-col">
 
-<h1>Game number: {{ game.id }}</h1>
-<h2>Turn: Player {{ game.current_player }}</h2>
+<div class="flex justify-center text-xl">Game number: {{ game.id }}</div>
+<div class="flex justify-center text-l">Turn: Player {{ game.current_player }}</div>
 
-<div id="board" class="border border-blue-500">
-    <table>
-        {% for row in game.board %}
-            <tr>
-            {% for box in row %}
-                <td class="border">{{ box }}</td>   
-            {% endfor %}
-            </tr>
-       {% endfor %}
-    </table>
+<div id="board" class="flex justify-center m-4">
+    {% include 'tictactoe/board.html' %}
 </div>
 
 </div>
